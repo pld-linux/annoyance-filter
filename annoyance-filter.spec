@@ -1,12 +1,12 @@
 Summary:	Adaptive Bayesian junk mail filter
 Summary(pl):	Adaptacyjny bayesowski filtr niechcianej poczty
 Name:		annoyance-filter
-Version:	1.0b
+Version:	1.0d
 Release:	1
 License:	Public Domain
 Group:		Applications/Mail
 Source0:	http://www.fourmilab.ch/annoyance-filter/%{name}-%{version}.tar.gz
-# Source0-md5:	f0910681eaa71bb71ab902d321e61e25
+# Source0-md5:	bb45c6264f9483888cc2fa50f897ac71
 URL:		http://www.fourmilab.ch/annoyance-filter/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -32,8 +32,11 @@ CPPFLAGS="%{rpmcflags} -fpermissive"
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+install -p -D %{name} $RPM_BUILD_ROOT%{_bindir}/%{name}
+install -p -D %{name}.1 $RPM_BUILD_ROOT/%{_mandir}/man1/%{name}.1
+
+#%{__make} install \
+#	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -42,3 +45,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README 
 %attr(755,root,root) %{_bindir}/*
+%{_mandir}/man1/*
