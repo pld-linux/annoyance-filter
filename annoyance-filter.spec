@@ -31,12 +31,10 @@ CPPFLAGS="%{rpmcflags} -fpermissive"
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install -p -D %{name} $RPM_BUILD_ROOT%{_bindir}/%{name}
-install -p -D %{name}.1 $RPM_BUILD_ROOT/%{_mandir}/man1/%{name}.1
-
-#%{__make} install \
-#	DESTDIR=$RPM_BUILD_ROOT
+install %{name} $RPM_BUILD_ROOT%{_bindir}/%{name}
+install %{name}.1 $RPM_BUILD_ROOT/%{_mandir}/man1/%{name}.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
