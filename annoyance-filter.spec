@@ -1,4 +1,4 @@
-Summary:	Adaptive Bayesian Junk Mail Filter
+Summary:	Adaptive Bayesian junk mail filter
 Summary(pl):	Adaptacyjny bayesowski filtr niechcianej poczty
 Name:		annoyance-filter
 Version:	1.0b
@@ -13,7 +13,7 @@ BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Adaptive Bayesian Junk Mail Filter.
+Adaptive Bayesian junk mail filter.
 
 %description -l pl
 Adaptacyjny bayesowski filtr niechcianej poczty.
