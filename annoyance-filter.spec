@@ -1,38 +1,31 @@
 Summary:	Adaptive Bayesian Junk Mail Filter
+Summary(pl):	Adaptacyjny bayesowski filtr niechcianej poczty
 Name:		annoyance-filter
 Version:	1.0b
 Release:	1
-License:	- (enter GPL/LGPL/BSD/BSD-like/other license name here)
+License:	Public Domain
 Group:		Applications/Mail
 Source0:	http://www.fourmilab.ch/annoyance-filter/%{name}-%{version}.tar.gz
 # Source0-md5:	f0910681eaa71bb71ab902d321e61e25
 URL:		http://www.fourmilab.ch/annoyance-filter/
-#BuildRequires:	-
-#PreReq:		-
-#Requires(pre,post):	-
-#Requires(preun):	-
-#Requires(postun):	-
-#Requires:	-
-#Provides:	-
-#Obsoletes:	-
-#Conflicts:	-
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-z
+Adaptive Bayesian Junk Mail Filter.
+
 %description -l pl
-z
+Adaptacyjny bayesowski filtr niechcianej poczty.
 
 %prep
 %setup -q 
 
-
 %build
-
-export CFLAGS="%{rpmcflags} -fpermissive"
-export CPPFLAGS="%{rpmcflags} -fpermissive"
 %{__aclocal}
 %{__autoconf}
+CFLAGS="%{rpmcflags} -fpermissive"
+CPPFLAGS="%{rpmcflags} -fpermissive"
 %configure
 %{__make}
 
