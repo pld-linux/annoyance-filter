@@ -19,7 +19,7 @@ Adaptive Bayesian junk mail filter.
 Adaptacyjny bayesowski filtr niechcianej poczty.
 
 %prep
-%setup -q 
+%setup -q
 
 %build
 %{__aclocal}
@@ -34,13 +34,13 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 install %{name} $RPM_BUILD_ROOT%{_bindir}/%{name}
-install %{name}.1 $RPM_BUILD_ROOT/%{_mandir}/man1/%{name}.1
+install %{name}.1 $RPM_BUILD_ROOT%{_mandir}/man1/%{name}.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README 
+%doc README
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
