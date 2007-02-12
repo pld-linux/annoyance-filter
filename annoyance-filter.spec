@@ -1,5 +1,5 @@
 Summary:	Adaptive Bayesian junk mail filter
-Summary(pl.UTF-8):   Adaptacyjny bayesowski filtr niechcianej poczty
+Summary(pl.UTF-8):	Adaptacyjny bayesowski filtr niechcianej poczty
 Name:		annoyance-filter
 Version:	1.0d
 Release:	1
